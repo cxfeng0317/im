@@ -1,0 +1,18 @@
+spring:
+  mvc:
+    view:
+      prefix: "/WEB-INF/jsp/"
+      suffix: ".jsp"
+    pathmatch:
+      use-suffix-pattern: true
+      use-registered-suffix-pattern: false
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/imdb?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: root
+mybatis:
+  type-aliases-package: com.company.bean
+  mapper-locations: classpath:mapper/*.xml
+#配置页码容量
+pageCount: 5
